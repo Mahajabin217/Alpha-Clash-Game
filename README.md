@@ -27,12 +27,15 @@ Implementing dynamic game mechanics with JavaScript.
 Hosting projects on Netlify for a live and fast experience.
 
 🤝 Contributions
+
 Feel free to fork this repository, explore the code, and submit pull requests for improvements or new features!
 
 📬 Feedback
+
 I’d love to hear your thoughts on the game. Play it, enjoy it, and share your feedback!
 
 📝 License
+
 This project is open-source and available under the MIT License.
 
 Thank you for visiting! Happy gaming! 🎉
