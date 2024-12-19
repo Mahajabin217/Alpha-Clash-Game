@@ -127,7 +127,7 @@ function gameOver(){
 
     // Clear previous alphabet
     //1. Set the current alphabet:
-    const currentAlphabet = getElementTextById('current-alphabet');
+    const currentAlphabet = getElementTextById('new-alphabet');
     //console.log(currentAlphabet);
 
     //2. Remove the bg color of the current alphabet:
