@@ -14,7 +14,7 @@ function handleKeyboardButtonPress(event) {
     const playerPressed = event.key;
     console.log('Player Pressed', playerPressed);
 
-    if(playerPressed === 'Escape'){
+    if (playerPressed === 'Escape') {
         gameOver();
     }
 
@@ -32,8 +32,8 @@ function handleKeyboardButtonPress(event) {
         const currentScore = getTextElementValueById('current-score');
         //console.log(currentScore);
 
-        const updatedScore = currentScore+1;
-        setTextElementValueById('current-score',updatedScore);
+        const updatedScore = currentScore + 1;
+        setTextElementValueById('current-score', updatedScore);
 
         // Way-1:
         // Update Score:
@@ -60,27 +60,27 @@ function handleKeyboardButtonPress(event) {
 
         // Way-2:
         const currentLife = getTextElementValueById('current-life');
-        const updatedLife = currentLife-1;
-        setTextElementValueById('current-life',updatedLife);
+        const updatedLife = currentLife - 1;
+        setTextElementValueById('current-life', updatedLife);
 
-        if(updatedLife === 0){
+        if (updatedLife === 0) {
             //console.log('Game Over');
             gameOver();
         }
 
-    /*  Way-1:   
-        // Reduce Life:
-        // 1. Get the current life number:
-        const currentLifeElement = document.getElementById('current-life');
-        const currentLifeText = currentLifeElement.innerText;
-        const currentLife = parseInt(currentLifeText);
-
-        // 2.Reduce the life:
-        const newLife = currentLife - 1;
-
-        // 3. Show the updated life:
-        currentLifeElement.innerText = newLife; 
-        */
+        /*  Way-1:   
+            // Reduce Life:
+            // 1. Get the current life number:
+            const currentLifeElement = document.getElementById('current-life');
+            const currentLifeText = currentLifeElement.innerText;
+            const currentLife = parseInt(currentLifeText);
+    
+            // 2.Reduce the life:
+            const newLife = currentLife - 1;
+    
+            // 3. Show the updated life:
+            currentLifeElement.innerText = newLife; 
+            */
     }
 }
 
@@ -88,6 +88,7 @@ function handleKeyboardButtonPress(event) {
 document.addEventListener('keyup', handleKeyboardButtonPress);
 
 function continueGame() {
+    
     // Generate a random alphabet:
     const alphabet = getRandomAlphabet();
     //console.log('Your Random Alphabet is', alphabet);
@@ -101,19 +102,20 @@ function continueGame() {
 }
 
 function play() {
+
     // Hode everything show only playground
     hideElementById('home-screen');
     hideElementById('final-score');
     showElementById('play-ground');
 
     // Reset score & life
-    setTextElementValueById('current-life',5);
-    setTextElementValueById('current-score',0);
+    setTextElementValueById('current-life', 5);
+    setTextElementValueById('current-score', 0);
 
     continueGame();
 }
 
-function gameOver(){
+function gameOver() {
     hideElementById('play-ground');
     showElementById('final-score');
 
@@ -123,7 +125,7 @@ function gameOver(){
     console.log(lastScore);
 
     // 2. Set the final score:
-    setTextElementValueById('last-score',lastScore);
+    setTextElementValueById('last-score', lastScore);
 
     // Clear previous alphabet
     //1. Set the current alphabet:

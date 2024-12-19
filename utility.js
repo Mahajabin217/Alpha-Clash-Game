@@ -1,42 +1,43 @@
-function hideElementById(elementId){
+function hideElementById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.add('hidden');
 }
 
-function showElementById(elementId){
+function showElementById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.remove('hidden');
 }
 
-function setBgColorById(elementId){
+function setBgColorById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.add('bg-orange-400');
 }
 
-function removeBgColorById(elementId){
-    const element =document.getElementById(elementId);
+function removeBgColorById(elementId) {
+    const element = document.getElementById(elementId);
     element.classList.remove('bg-orange-400');
 }
 
-function getTextElementValueById(elementId){
+function getTextElementValueById(elementId) {
     const element = document.getElementById(elementId);
     const elementValueText = element.innerText;
     const value = parseInt(elementValueText);
     return value;
 }
 
-function setTextElementValueById(elementId,value){
+function setTextElementValueById(elementId, value) {
     const element = document.getElementById(elementId);
-    element.innerText=value; 
+    element.innerText = value;
 }
 
-function getElementTextById(elementId){
+function getElementTextById(elementId) {
     const element = document.getElementById(elementId);
     const text = element.innerText;
     return text;
 }
 
-function getRandomAlphabet(){
+function getRandomAlphabet() {
+    
     // Creating a Alphabet array
     const alphabetString = 'abcdefghijklmnopqrstuvwxyz';
     const alphabets = alphabetString.split('');
